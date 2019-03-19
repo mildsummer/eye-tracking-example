@@ -1,0 +1,33 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "import/resolve": {
+      "extenstions": [".es6", ".js", ".css", ".sass"]
+    },
+    "propWrapperFunctions": [
+      // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
+      "forbidExtraProps",
+      {"property": "freeze", "object": "Object"},
+      {"property": "myFavoriteWrapper"}
+    ]
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "no-console": "warn"
+  },
+  "parser": "babel-eslint",
+  "globals": {
+    "Inferno": true,
+    "Component": true,
+    "render": true,
+    "createComponentVNode": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2017
+  }
+}
